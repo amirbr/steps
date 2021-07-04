@@ -1,5 +1,6 @@
 .containers-comments {
     display: flex;
-    align-items: center;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
 }
