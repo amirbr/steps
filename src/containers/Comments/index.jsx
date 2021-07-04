@@ -18,7 +18,7 @@ const Comments = () => {
 
   return (
     <div className='containers-comments'>
-      {loading ? 'loading...' :
+      {loading ? <h2 className='loading'>Loading...</h2> :
         list.map(({ name, email, body }) => <Comment key={nanoid()} name={name} email={email} body={body}/>)
       }
       {error && <div>Error!</div>}
