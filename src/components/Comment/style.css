@@ -5,6 +5,13 @@
     border: 1px solid gray;
     border-radius: 4px;
     text-align: left;
+    margin-bottom: 25px;
+    transition: box-shadow .3s;
+    cursor: pointer;
+}
+
+.comment:hover {
+    box-shadow: 0 0 11px rgba(33, 33, 33, .2);
 }
 
 img {

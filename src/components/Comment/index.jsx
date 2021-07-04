@@ -6,7 +6,7 @@ const Comment = ({ name, email, body }) => (
     <img src={userPlaceholder} alt=""/>
     <div>
       <div className='name'>{name}</div>
-      <div className='email'>Email: {email}</div>
+      <div className='email'>{email}</div>
       <div className='body'>{body}</div>
     </div>
   </div>
