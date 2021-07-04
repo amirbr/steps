@@ -1,7 +1,7 @@
-import onScrollBottom from "./onScrollBottom";
-import useFetch from "./useFetch";
+import UseOnScrollBottom from "./UseOnScrollBottom";
+import useFetch from "./UseFetch";
 
 export {
-  onScrollBottom,
+  UseOnScrollBottom,
   useFetch
 }
