@@ -2,7 +2,7 @@
     display: flex;
     width: 550px;
     padding: 15px;
-    border: 1px solid gray;
+    border: 1.2px solid gray;
     border-radius: 4px;
     text-align: left;
     transition: box-shadow .3s;
@@ -19,6 +19,7 @@
 
 .comment:hover {
     box-shadow: 0 0 11px rgba(33, 33, 33, .2);
+    border: 1.2px solid #2b7cf2;
 }
 
 img {
