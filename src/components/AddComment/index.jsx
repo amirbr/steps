@@ -1,24 +1,26 @@
 import { useState } from "react";
+import { useFetch } from "../../hooks";
 import './style.css'
 
+const URL_POST_COMMENT = (query) => `https://test.steps.me/test/testAssignComment&${query}`
+
 const AddComment = () => {
-  const [comment, setComment] = useState('Add Comment...')
+  const [comment, setComment] = useState('')
+  const { error, sendQuery } = useFetch()
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log('handleSubmit')
+    setComment('')
+    sendQuery('POST', URL_POST_COMMENT(comment))
+    if(!error) {
+      console.log('handleSubmit')
+    } else {
+      console.log('handle error')
+    }
   }
 
   const handleChange = (event) => {
     setComment(event.target.value)
-  }
-
-  const onFocus = () => {
-    setComment('')
-  }
-
-  const onBlur = () => {
-    setComment('Add Comment...')
   }
 
   return (
@@ -28,8 +30,7 @@ const AddComment = () => {
         <textarea
           value={comment}
           onChange={handleChange}
-          onFocus={onFocus}
-          onBlur={onBlur}
+          placeholder="Add Comment..."
         />
       </label>
       <input type="submit" value="Submit" />

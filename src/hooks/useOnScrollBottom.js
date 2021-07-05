@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-const UseOnScrollBottom = (threshold) => {
+const useOnScrollBottom = (threshold) => {
   const [isAtBottom, setIsAtBottom] = useState(false)
 
   useEffect(() => {
@@ -23,4 +23,4 @@ const UseOnScrollBottom = (threshold) => {
   return { isAtBottom }
 }
 
-export default UseOnScrollBottom
+export default useOnScrollBottom
