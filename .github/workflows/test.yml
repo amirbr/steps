@@ -9,5 +9,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
+    - uses: actions/setup-node@v2
+      with: 
+        node-version: '10.14.2'
+        cache: 'npm'
     - name: Run Jest
       uses: stefanoeb/jest-action@1.0.3
